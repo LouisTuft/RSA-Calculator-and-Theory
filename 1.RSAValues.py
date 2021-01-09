@@ -5,7 +5,7 @@ Created on Wed Dec 30 02:13:03 2020
 @author: Louis
 """
 """
-The theory behind RSA is explained in the readme file in the repository. This 
+The theory behind RSA is explained in the Readme file in the repository. This 
 python file is the first of three that form a complete RSA system. This file 
 in particular will allow you to construct your own set of keys for RSA. The 
 goal of this file is to establish the size of primes required to encrypt the 
