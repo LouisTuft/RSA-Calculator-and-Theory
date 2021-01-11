@@ -45,15 +45,25 @@ The only real constraint when choosing e is that it must be coprime to phi(n) wh
 # Calculating d
 From our discussion above we know the following:
 ((EncodeMessage)^e)^d (modulo n) = (EncodedMessage)^ed = EncodedMessage (i.e. encrypting and decrypting returns the encoded message.)
+
 Now, this is equivalent to saying that ed is congruent to 1 modulo phi(n), in other words:
+
 ed + k.phi(n) = 1 for some integer k. (This actually has infinitely many solutions but we are interested in the smallest, positive value of d.)
+
 If we choose e then the unknowns in the equation above are d and k, we want to know d but we don't need to know k as we are working modulo phi(n) so its irrelevant. But we can workout the two unkowns by using the Extended Euclidean algorithm, here is an example:
 
 p = 7, q = 5, n = 35, phi(n) = 24. Let e = 7. Then ed + k.phi(n) = 7.d + k.24 = 1.
+
 24 = 7.3 + 3
+
  7 = 3.2 + 1
+ 
  3 = 1.3 + 0
+ 
 Now we go back up from our smallest non-zero remainder.
+
  1 = 7 - 3.2
+ 
  1 = 7 - (24 - 7.3).2 = 7 - 24.2 + 7.6 = 7.7 - 24.2
+ 
 Therefore d = 7 and k = 2.
